@@ -1,3 +1,13 @@
+n = int(input())
+def fustpower(a,d,N,r):
+    if d==0:
+        return r
+    elif d%2==0:
+        return fustpower(a*a%N, d//2, N, r)
+    else:
+        return fustpower(a*a%N, (d-1)//2, N, r*a%N)
+
+
 def fp(a,d):
     if d==1:
         return a
